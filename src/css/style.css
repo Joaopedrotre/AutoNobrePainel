@@ -1,0 +1,251 @@
+/* =====================================================================
+   IDENTIDADE VISUAL — AUTO NOBRE REPRESENTAÇÕES
+   Painel de controle alinhado à identidade do site institucional
+   (Projeto 2): azul + amarelo, logo da coroa, tipografia Arial.
+   ===================================================================== */
+
+:root {
+    --azul: #0b3b82;
+    --azul-escuro: #082b61;
+    --amarelo: #e7b92d;
+    --amarelo-escuro: #c79f26;
+    --branco: #ffffff;
+    --cinza: #f8f9fa;
+    --cinza-borda: #dee2e6;
+    --texto: #212529;
+    --texto-suave: #6c7684;
+}
+
+body {
+    background: var(--cinza);
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+}
+
+h1, h2, h3, .navbar-brand, .card-header {
+    font-family: Arial, sans-serif;
+}
+
+/* ============================================================
+   NAVBAR — fundo branco, sombra suave, sticky, borda inferior azul
+   ============================================================ */
+
+.navbar {
+    background: var(--branco);
+    border-bottom: 3px solid var(--azul);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.logo-navbar {
+    height: 48px;
+    width: auto;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.marca-texto small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--texto-suave);
+}
+
+.texto-badge-setor {
+    background: var(--amarelo);
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+}
+
+/* ============================================================
+   SUB-NAVBAR — abas entre Dashboard / Produtos / Categorias / Pedidos
+   ============================================================ */
+
+.sub-navbar {
+    background: var(--branco);
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.nav-abas-nobre .nav-link {
+    color: var(--texto-suave);
+    font-weight: 600;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    padding: 0.9rem 1.1rem;
+}
+
+.nav-abas-nobre .nav-link:hover {
+    color: var(--azul);
+}
+
+.nav-abas-nobre .nav-link.active {
+    color: var(--azul);
+    background: transparent;
+    border-bottom-color: var(--amarelo);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    background: var(--branco);
+    border-bottom: 1px solid var(--cinza-borda);
+    border-radius: 15px 15px 0 0 !important;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.card-kpi {
+    border-top: 5px solid var(--amarelo);
+    transition: 0.3s;
+}
+
+.card-kpi:hover {
+    transform: translateY(-5px);
+}
+
+.card-kpi-rotulo {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--texto-suave);
+    font-weight: 700;
+}
+
+.card-kpi-valor {
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.btn-primary-custom,
+.btn-acento {
+    background: var(--azul);
+    border-color: var(--azul);
+    color: var(--branco);
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-primary-custom:hover,
+.btn-acento:hover {
+    background: var(--azul-escuro);
+    border-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+.btn-warning-custom {
+    background: var(--amarelo);
+    border-color: var(--amarelo);
+    color: var(--branco);
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-warning-custom:hover {
+    background: var(--amarelo-escuro);
+    border-color: var(--amarelo-escuro);
+    color: var(--branco);
+}
+
+.btn-sm.btn-acento {
+    padding: 0.25rem 0.9rem;
+}
+
+.list-group-item {
+    border-color: var(--cinza-borda);
+}
+
+.table thead th {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--texto-suave);
+    border-bottom-width: 1px;
+}
+
+.badge.bg-info-subtle {
+    background-color: rgba(11, 59, 130, 0.08) !important;
+    color: var(--azul) !important;
+}
+
+/* ============================================================
+   FILTROS / BUSCA — estilo "pill" com borda azul
+   ============================================================ */
+
+.campo-busca-pill {
+    border: 2px solid var(--azul);
+    border-radius: 50px;
+    padding: 8px 16px;
+}
+
+/* ============================================================
+   PAGINAÇÃO DE PRODUTOS
+   ============================================================ */
+
+.paginacao-produtos {
+    border-top: 1px solid var(--cinza-borda);
+}
+
+/* ============================================================
+   FATURAMENTO POR CATEGORIA (barra de progresso)
+   ============================================================ */
+
+.progress {
+    background-color: var(--cinza);
+}
+
+.progress-bar-nobre {
+    background-color: var(--amarelo);
+}
+
+/* ============================================================
+   RODAPÉ DO PAINEL
+   ============================================================ */
+
+.footer-painel {
+    background: var(--azul);
+    color: var(--branco);
+    padding: 1rem 0;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+}
+
+/* ============================================================
+   TOASTS
+   ============================================================ */
+
+#containerToasts {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1080;
+}
